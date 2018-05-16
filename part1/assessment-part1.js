@@ -164,5 +164,8 @@ var theAnswer = "Unknown";
 // CODE HERE...
 
 function promiseCatcher(promise) {
-  promise.then(response => (theAnswer = response));
+  promise.then(response => {
+    theAnswer = response;
+    return response;
+  });
 }
